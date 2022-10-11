@@ -29,6 +29,10 @@ function init() {
         }, function (err) {
             if (err) {
                 console.log(err);
+                log.value += err + "\n";
+                alert("barcode reader failed to initialize.");
+                Quagga.stop();
+                hide();
                 return;
             }
             console.log("Initialization finished. Ready to start");
