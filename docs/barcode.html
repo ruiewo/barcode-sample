@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./barcode.css" />
+    <script type="module" src="./barcode.js"></script>
+    <script src="./quagga.min.js"></script>
+  </head>
+  <body>
+    <div id="ui" class="ui">
+      <h3>Select barcode type</h3>
+      <select id="barcodeType">
+        <option value="code_128_reader">code_128_reader</option>
+        <option value="ean_reader">ean_reader</option>
+        <option value="ean_8_reader">ean_8_reader</option>
+        <option value="code_39_reader">code_39_reader</option>
+        <option value="code_39_vin_reader">code_39_vin_reader</option>
+        <option value="codabar_reader">codabar_reader</option>
+        <option value="upc_reader">upc_reader</option>
+        <option value="upc_e_reader">upc_e_reader</option>
+        <option value="i2of5_reader">i2of5_reader</option>
+        <option value="2of5_reader">2of5_reader</option>
+        <option value="code_93_reader">code_93_reader</option>
+      </select>
+      <button id="startButton">START</button>
+      <h3>Result</h3>
+      <input type="text" id="resultInput" />
+      <h3>log</h3>
+      <textarea id="log" cols="30" rows="10"></textarea>
+    </div>
+    <div id="screen" class="screen hidden">
+      <button id="stopButton">STOP</button>
+    </div>
+  </body>
+</html>
